@@ -6,9 +6,10 @@ env:
 before_script:
   - psql -c 'create database momentum_test' -U postgres
 script:
+  - RAILS_ENV=test bundle exec rake db:reset --trace
+  - RAILS_ENV=test bundle exec rake db:test:prepare
   - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-  - bundle exec rake
+  - RAILS_ENV=test bundle exec rake
 deploy:
   provider: heroku
   strategy: git
