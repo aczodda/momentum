@@ -31,3 +31,20 @@ daniel:
   last_sign_in_at: 2014-03-15 20:45:24.302974000 Z
   current_sign_in_ip: 127.0.0.1
   last_sign_in_ip: 127.0.0.1
+
+ed:
+  id: 3
+  first_name: 
+  last_name: 
+  created_at: 2014-03-15 20:45:24.294936000 Z
+  updated_at: 2014-03-15 20:45:24.303375000 Z
+  email: esumerfield@ipcoop.com
+  encrypted_password: \"$2a$10$6fNfa23sIzJxjmLSx9l7A.aCDCcn7GElXEcWIpEmJ/9ss.Trps.lm\"
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  sign_in_count: 1
+  current_sign_in_at: 2014-03-15 20:45:24.302974000 Z
+  last_sign_in_at: 2014-03-15 20:45:24.302974000 Z
+  current_sign_in_ip: 127.0.0.1
+  last_sign_in_ip: 127.0.0.1
