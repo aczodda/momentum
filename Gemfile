@@ -13,11 +13,11 @@ group :doc do
 end
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  # gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'therubyrhino'
   gem 'bootstrap-sass'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
   gem 'closure-compiler'
 end
 
