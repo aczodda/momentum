@@ -1,0 +1,15 @@
+one:
+  id: 1
+  message: Way to go!
+  created_at: 
+  updated_at: 
+  user_id: ariel
+  author_id: daniel
+
+two:
+  id: 2
+  message: Great job!
+  created_at: 
+  updated_at: 
+  user_id: daniel
+  author_id: ariel
