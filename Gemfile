@@ -22,10 +22,10 @@ group :assets do
   gem 'closure-compiler'
 end
 
-
 group :development, :test do
   gem 'rspec-rails'
   gem 'cucumber'
+  gem 'poltergeist'
   gem 'capybara'
   gem 'launchy'
 end
