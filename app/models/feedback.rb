@@ -1,4 +1,4 @@
 class Feedback < ActiveRecord::Base
   belongs_to :user
-  has_one :author
+  belongs_to :author, class_name: 'User'
 end
