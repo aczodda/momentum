@@ -13,4 +13,7 @@ deploy:
   provider: heroku
   api_key: "1bd0640d-aca3-4679-997f-76b9a82cfaf8"
   app: "momentum-app"
-  run: "rake db:migrate"
+  run:
+      - "rake db:migrate"
+      - restart
+      - "rake cleanup"
