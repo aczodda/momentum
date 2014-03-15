@@ -8,6 +8,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'pg'
 gem 'devise'
+gem 'therubyracer'
+gem 'less-rails'
 
 group :doc do
   gem 'sdoc', require: false
