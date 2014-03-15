@@ -14,8 +14,6 @@ deploy:
   strategy: git
   api_key: "1bd0640d-aca3-4679-997f-76b9a82cfaf8"
   app: "momentum-app"
-  on:
-    tags: true
   run:
     - "rake db:migrate"
     - restart
