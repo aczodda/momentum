@@ -1,6 +1,5 @@
 Given(/^I go to the Momentum home page$/) do
   visit '/'
-  find('//div[@id="container"]/h2', :text => 'Sign in')
 end
 
 When(/^I click on the sign up link$/) do
@@ -29,7 +28,6 @@ end
 
 Given(/^I have an account on Momentum$/) do
   visit '/'
-  find('//div[@id="container"]/h2', :text => 'Sign in')
 end
 
 When(/^I login with my credentials$/) do
