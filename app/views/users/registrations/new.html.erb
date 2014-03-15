@@ -8,26 +8,20 @@
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 	  <%= devise_error_messages! %>
 
-	  <div class="email-input">
-	  	<%= f.email_field :email, { value: "Email" } %>
-		</div>
+  	<%= f.email_field :email, { value: "Email", 
+  															class: "form-input email-input" } %>
 
-		<div class="dummy-password-input">
-	  	<%= f.text_field :password, { value: "Password" } %>
-		</div>
+  	<%= f.text_field :password, { value: "Password", 
+  																class: "form-input dummy-password-input" } %>
 
-		<div class="password-input hidden">
-	  	<%= f.password_field :password %>
-		</div>
+  	<%= f.password_field :password, class: "form-input password-input" %>
 
-	  <div class="dummy-password-input">
-	  	<%= f.text_field :password_confirmation, 
-	  									{ value: "Password Confirmation" } %>
-		</div>
+  	<%= f.text_field :password_confirmation, 
+  									{ value: "Password Confirmation",
+  										class: "form-input dummy-password-input" } %>
 
-	  <div class="password-input hidden">
-	  	<%= f.password_field :password_confirmation %>
-		</div>
+  	<%= f.password_field :password_confirmation, 
+  												class: "form-input password-input" %>
 
 	  <div><%= f.submit "Sign up" %></div>
 	<% end %>

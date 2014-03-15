@@ -6,12 +6,12 @@
 	<h2>The Praise You Get</h2>
 
 	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-	  	<%= f.email_field :email, { class: "email-input", value: "Email"} %>
+	  	<%= f.email_field :email, { class: "form-input email-input", value: "Email"} %>
 
-	  	<%= f.email_field :email, { class: "dummy-password-input", 
+	  	<%= f.email_field :email, { class: "form-input dummy-password-input", 
 	  															value: "Password" } %>
 
-	  	<%= f.password_field :password, class: "password-input hidden" %>
+	  	<%= f.password_field :password, class: "form-input password-input" %>
 
 	  <% if devise_mapping.rememberable? -%>
 	    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>

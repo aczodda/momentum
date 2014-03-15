@@ -54,7 +54,12 @@ footer {
 }
 
 .form-input {
-	//display: block;
+	display: block;
+	margin: auto;
+}
+
+.password-input {
+	display: none;
 }
 
 .hidden {
