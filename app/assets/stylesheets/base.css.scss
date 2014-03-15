@@ -4,9 +4,14 @@
 	margin: auto;
 
 	background: #EEEEEE;
+	overflow: hidden;
 }
 
 footer {
 	text-align: center;
 	background: #CDCDCD;
+	p {
+		margin: 0;
+		padding: 0;
+	}
 }
