@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	$('.dummy-password-input').on('click', function() {
-		$(this).addClass("hidden");
-		
-		$(this).next().removeClass('hidden');
+		$(this).hide();
+		$(this).next().show(0, function() {
+			$(this).next().focus();
+		});
 	});
 });
