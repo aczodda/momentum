@@ -1,38 +1,3 @@
-body {
-	margin: 0;
-}
-
-h1 {
-	margin: 0;
-}
-
-h2 {
-	margin: 0;
-}
-
-header {
-	background: #CDCDCD;
-
-	padding: 0;
-	margin: 0;
-	
-	#header-links {
-
-	}
-}
-
-.vertical-align-helper {
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-}
-
-.content {
-	vertical-align: middle;
-	max-height: 500px;
-	max-width: 900px;
-}
-
 #container {
 	width: 900px;
 	min-height: 500px;
@@ -42,17 +7,4 @@ header {
 	background: #EEEEEE;
 	
 	clear: both;
-}
-
-footer {
-	text-align: center;
-	background: #CDCDCD;
-	p {
-		margin: 0;
-		padding: 0;
-	}
-}
-
-.hidden {
-	display: none;
 }
