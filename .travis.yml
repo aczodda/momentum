@@ -3,13 +3,12 @@ rvm:
   - 2.1.1
 env:
   - DB=postgresql
+before_script:
+  - psql -c 'create database momentum_test' -U postgres
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rake
-before_script:
-  - bundle exec bundle install --binstubs --local --path vendor
-  - psql -c 'create database momentum_test' -U postgres
 deploy:
   provider: heroku
   strategy: git
@@ -18,5 +17,5 @@ deploy:
   on:
     tags: true
   run:
-      - "rake db:migrate"
-      - restart
+    - "rake db:migrate"
+    - restart
