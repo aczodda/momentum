@@ -4,6 +4,7 @@ class HomeController < ApplicationController
 
   def index
     @user = current_user
+    @praises = []
   end
 
   def feed
