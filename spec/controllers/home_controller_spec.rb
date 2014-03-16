@@ -13,12 +13,12 @@ describe HomeController do
     end
 
     it 'gets index without feedback' do
-      @user = create(:user, :first_name => 'Peter', :last_name => 'Pan', :password => 'Tester1!')
-      sign_in :user, @user
+      user = create(:user, :first_name => 'Peter', :last_name => 'Pan', :password => 'Tester1!')
+      sign_in :user, user
       res = get :index
-      puts res
       assert_response :success
       assert_not_nil assigns(:praises)
+      assert assigns['user'] == user
       assert assigns['praises'].size == 0  
     end
 
