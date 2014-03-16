@@ -1,12 +1,77 @@
 
 <div class="container">
-  <div class="page-header">
-    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+  <div class="row">
+    <div class="col-xs-2">
+      <%= image_tag avatar_url(@user, 128), {class: "gravatar"} %>
+    </div>
+    <div class="col-xs-3">
+      <h3><%= @user.full_name %></h3>
+      Name: <%= @user.full_name %><br />
+      Email: <%= @user.email %><br />
+      Feedback: <%= @user.feedbacks.count %> 
+    </div>
+    <div class="col-xs-7">
+
+      <% if flash[:error] %>      
+      <div class="alert alert-danger">
+        <strong>Oh snap!</strong> <%= flash[:error] %>
+      </div>
+      <% end %>
+
+      <% if flash[:success] %>      
+      <div class="alert alert-success">
+        <%= flash[:success] %>
+      </div>
+      <% end %>
+
+      <%= form_tag(action:"add_feedback", method:"post") do %>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <%= label_tag(:message, "Send Praise", class:"control-label") %>
+            <%= text_area(:message, nil, rows:3, class:"form-control") %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-10">
+          <%= select_tag(:user_id, options_for_select(@users.collect { |u| [u.full_name, u.id] }), class:"form-control") %>
+        </div>
+        <div class="col-xs-2">
+          <div class="form-group">
+            <%= submit_tag(:Submit, class:"btn btn-primary") %>
+          </div>
+        </div>
+      </div>
+
+      <% end %>
+
+    </div>
   </div>
 
-  <% @user.feedbacks.each do |feedback| %>
-    <div>
-      <%= feedback.message %>
+  <hr />
+  
+  <h3>Praise you've received</h3>
+
+  <% @user.sorted_feedback.each do |feedback| %>
+  <div class="row">
+    <div class="col-xs-2">
+      
     </div>
+    <div class="col-xs-1">
+      <%= image_tag avatar_url(feedback.author, 64), class:"gravatar" %><br/>
+    </div>
+    <div class="col-xs-7">
+      <div class="">
+        <blockquote>
+          <p><%= feedback.message %></p>
+          <small><%= feedback.author.full_name %> <strong><%= feedback.created_at.strftime("%x %X") %></strong></small>
+        </blockquote>
+      </div>
+    </div>
+  </div>
   <% end %>
+
 </div>

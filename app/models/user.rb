@@ -7,4 +7,12 @@ class User < ActiveRecord::Base
 
   validates_presence_of :first_name
   validates_presence_of :last_name
+
+  def full_name
+    [first_name, last_name].join(' ')
+  end
+
+  def sorted_feedback
+    feedbacks.sort {|a,b| b.created_at <=> a.created_at}
+  end
 end
