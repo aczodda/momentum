@@ -1,6 +1,17 @@
 <% if @feedbacks.empty? %>
 	<!-- Handle no feedbacks -->
-	<%= "Feedbacks is empty" %>
+	<div class="row">
+		<div class="col-xs-4">
+		</div>
+
+		<div class="col-xs-4">
+			<p>Nobody has given any praise yet.</p>
+			<p>Be the first! Sign up or go to your profile <a href=<%= root_url %>>here.</a></p>
+		</div>
+
+		<div class="col-xs-4">
+		</div>
+	</div>
 <% else %>
 	<!-- Loop through feedbacks displaying each one -->
 	<% @feedbacks.each do |feedback| %>
