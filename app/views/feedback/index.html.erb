@@ -19,7 +19,8 @@
 	      <div class="">
 	        <blockquote>
 	          <p><%= feedback.message %></p>
-	          <small><%= feedback.author.full_name %> <strong><%= feedback.created_at.strftime("%x %X") %></strong></small>
+	          <small><%= feedback.author.full_name %> to <%= feedback.user.full_name %></small> 
+	          <small><strong><%= feedback.created_at.strftime("%A %B %e, %l:%M %p") %></strong></small>
 	        </blockquote>
 	      </div>
 	    </div>
