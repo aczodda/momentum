@@ -6,7 +6,14 @@
 
 		<div class="col-xs-4">
 			<p>Nobody has given any praise yet.</p>
-			<p>Be the first! Sign up or go to your profile <a href=<%= root_url %>>here.</a></p>
+			<% if user_signed_in? %>
+				<!-- Show page for when a user is signed in -->
+				<p>Be the first! See your profile <a href=<%= root_path %>>here.</a></p>
+			<% else %>
+				<!-- Show page for when a user isn't signed in -->
+				<p>Be the first! Sign in here <a href=<%= root_path %>>here.</a></p>
+				<p>Don't have an account? Sign up <a href=<%= new_user_registration_path %>>here.</a></p>
+			<% end %>
 		</div>
 
 		<div class="col-xs-4">
