@@ -3,5 +3,26 @@
 	<%= "Feedbacks is empty" %>
 <% else %>
 	<!-- Loop through feedbacks displaying each one -->
-	<%= "Feedbacks not empty" %>
+	<% @feedbacks.each do |feedback| %>
+		<div class="row">
+	    <div class="col-xs-3">
+	      
+	    </div>
+	    <div class="col-xs-2">
+	      <div class="row">
+	      	<%= image_tag avatar_url(feedback.author, 64), class:"gravatar" %>
+		      <span class="glyphicon glyphicon-star"></span>
+		      <%= image_tag avatar_url(feedback.user, 64), class:"gravatar" %>
+	      </div>
+	    </div>
+	    <div class="col-xs-7">
+	      <div class="">
+	        <blockquote>
+	          <p><%= feedback.message %></p>
+	          <small><%= feedback.author.full_name %> <strong><%= feedback.created_at.strftime("%x %X") %></strong></small>
+	        </blockquote>
+	      </div>
+	    </div>
+	  </div>
+	<% end %>
 <% end %>
