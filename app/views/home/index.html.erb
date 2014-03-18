@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-2">
-      <%= image_tag avatar_url(@user, 128), {class: "gravatar"} %>
+      <%= image_tag avatar_url(@user, 128), {class: "gravatar img-circle"} %>
     </div>
     <div class="col-xs-3">
       <h3><%= @user.full_name %></h3>
@@ -61,7 +61,7 @@
       
     </div>
     <div class="col-xs-1">
-      <%= image_tag avatar_url(feedback.author, 64), class:"gravatar" %><br/>
+      <%= image_tag avatar_url(feedback.author, 64), class:"gravatar img-circle" %><br/>
     </div>
     <div class="col-xs-7">
       <div class="">

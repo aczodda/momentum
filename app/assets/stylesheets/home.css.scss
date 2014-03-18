@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+#error_explanation h2 {
+  font-size:16px;
+}
+
+.gravatar {
+  border: solid 1px silver;
+  padding: 4px;
+}
+
 .input_text-area {
 	overflow: hidden;
 	resize: none;
