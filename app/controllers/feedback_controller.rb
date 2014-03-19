@@ -1,6 +1,9 @@
 class FeedbackController < ApplicationController
+
+  before_filter :authenticate_user!
+
   def index
-  	@feedbacks = Feedback.all
+  	@feedbacks = Feedback.all.reverse
   end
 
   def create
