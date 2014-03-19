@@ -11,21 +11,12 @@ describe FeedbackController do
   describe 'get feedback' do
 
     it 'gets feedback in reverse chronological order' do
-      feedbacks = []
-      
-      f1 = Feedback.new
-      f1.created_at = Date.new(2014,2,3)
-      feedbacks << f1
-
-      f2 = Feedback.new
-      f2.created_at = Date.new(2014,2,4)
-      feedbacks << f2
-
-      f3 = Feedback.new
-      f3.created_at = Date.new(2014,2,5)
-      feedbacks << f3
-      
-      Feedback.stub(:all).and_return(feedbacks)
+      u1 = create :user, first_name: 'Mickey', last_name: 'Mouse', email: 'mickey@disney.com'
+      u2 = create :user, first_name: 'Minnie', last_name: 'Mouse', email: 'minnie@disney.com'
+      f1 = create :feedback, this_many_days_ago: 5, user: u1, author: u2
+      f2 = create :feedback, this_many_days_ago: 4, user: u1, author: u2
+      f3 = create :feedback, this_many_days_ago: 3, user: u1, author: u2
+      feedbacks = [f1,f2,f3]
 
       get :index
 
