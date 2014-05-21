@@ -66,13 +66,9 @@ Before do |scenario|
   if scenario.title == "Agree with feedback given by another user"
     # Test data for this cuke
     a = User.create(email: 'donald@disney.com', first_name: 'Donald', last_name: 'Duck', password:'password', password_confirmation:'password')
-    a.save
     b = User.create(email: 'daisy@disney.com', first_name: 'Daisy', last_name: 'Duck', password:'password', password_confirmation:'password')
-    b.save
     c = User.create(email: 'minnie@disney.com', first_name: 'Minnie', last_name: 'Mouse', password:'password', password_confirmation:'password')
-    c.save
-
-    Feedback.create(message: 'You are the best!', user:a, author:b)
+    
     Feedback.create(message: 'Great job!', user:b, author:a)
   end
 end

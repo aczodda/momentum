@@ -10,6 +10,8 @@ Momentum::Application.routes.draw do
 
   get  'all_feedback'      => 'feedback#index'
 
+  get  'feedback/add_support' => 'feedback#add_support'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -14,3 +14,11 @@ d = User.create(email: 'jertel@ipcoop.com', first_name: 'Jason', last_name: 'Ert
 Feedback.create(message: 'You are the best!', user:a, author:b)
 Feedback.create(message: 'Great job!', user:a, author:c)
 Feedback.create(message: "I can't wait until the next retrospective!", user:a, author:d)
+
+Feedback.create(message: 'You are the best!', user:b, author:a)
+Feedback.create(message: 'Great job!', user:b, author:c)
+Feedback.create(message: "I can't wait until the next retrospective!", user:b, author:d)
+
+Feedback.create(message: 'You are the best!', user:c, author:b)
+Feedback.create(message: 'Great job!', user:c, author:a)
+Feedback.create(message: "I can't wait until the next retrospective!", user:c, author:d)

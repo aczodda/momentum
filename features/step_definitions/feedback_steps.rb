@@ -13,9 +13,9 @@ Given(/^I see a bit of praise that I agree with$/) do
 end
 
 When(/^I click on the “agree” link for that praise$/) do
-  
+  click_link('Agree?')
 end
 
 Then(/^I should see my agreement reflected on the page$/) do
-  
+  find('//small', :text => 'Minnie Mouse agrees with this feedback')
 end

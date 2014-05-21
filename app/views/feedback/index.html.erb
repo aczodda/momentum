@@ -39,6 +39,10 @@
 	          <p><%= feedback.message %></p>
 	          <small><%= feedback.author.full_name %> to <%= feedback.user.full_name %></small> 
 	          <small><strong><%= feedback.created_at.strftime("%A %B %e, %l:%M %p") %></strong></small>
+	          <% if !feedback.supporters.nil? %>
+						  <small style="color:#009933;"><%= feedback.supporters %> agrees with this feedback</small>
+						<% end %>
+						<%= link_to 'Agree?', { controller: 'feedback', action: 'add_support', feedback_id: feedback.id }, style: 'font-size:12px;' %>
 	        </blockquote>
 	      </div>
 	    </div>
